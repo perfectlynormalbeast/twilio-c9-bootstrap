@@ -1,7 +1,12 @@
 serve:
-ifdef account_sid
-ifdef auth_token
-ifdef phone_number_sid
+ifndef account_sid
+ifndef auth_token
+ifndef phone_number_sid
+	@ echo "Usage: make serve account_sid=<account_sid> auth_token=<auth_token> phone_number_sid=<phone_number_sid"
+	@ exit 1
+endif
+endif
+endif
 	@. venv/bin/activate; \
 		echo "Bootstrapping app..."; \
 		python bootstrap.py $(account_sid) $(auth_token) $(phone_number_sid); \
@@ -9,15 +14,6 @@ ifdef phone_number_sid
 		python run.py
 	@ echo "Terminating any lingering ngrok instances..."
 	@ killall -9 ngrok
-else
-	@ echo "Missing phone number SID"
-endif
-else
-	@ echo "Missing auth token"
-endif
-else
-	@ echo "Missing account SID"
-endif
 
 install: venv
 	@. venv/bin/activate; \
