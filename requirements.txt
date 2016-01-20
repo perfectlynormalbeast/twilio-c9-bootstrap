@@ -4,6 +4,7 @@ itsdangerous==0.24
 Jinja2==2.8
 MarkupSafe==0.23
 pytz==2015.7
+requests==2.9.1
 six==1.10.0
 twilio==5.2.0
 Werkzeug==0.11.3
