@@ -1,7 +1,7 @@
 # twilio-c9-bootstrap
 ###### Jumpstart your first Twilio app using Python and Cloud9!
 
-twilio-bootstrap is designed to make setting up your first Twilio app a breeze. Here's a walkthrough of how to get one up in no time.
+twilio-c9-bootstrap is designed to make setting up your first Twilio app a breeze. Here's a walkthrough of how to get one up in no time.
 
 1. [Set up a Twilio account](https://www.twilio.com/try-twilio).
   - Make note of your Account SID & Auth Token, which can be found under your [Account Settings](https://www.twilio.com/user/account/settings).
