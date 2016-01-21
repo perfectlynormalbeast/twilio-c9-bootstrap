@@ -13,10 +13,14 @@ endif
 		echo "Starting Flask server..."; \
 		python run.py
 
-install: venv
+install: venv configure
 	@. venv/bin/activate; \
 		echo "Resolving Python dependencies..."; \
 		pip install --upgrade -r requirements.txt
+
+configure:
+	@. venv/bin/activate; \
+		python configure.py
 
 venv:
 	@ echo "Setting up virtual environment..."
