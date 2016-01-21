@@ -1,15 +1,14 @@
+#!/bin/bash -e
+
+CONFIG_FILE = config.json
+
+all: install serve
+
 serve:
-ifndef account_sid
-ifndef auth_token
-ifndef phone_number_sid
-	@ echo "Usage: make serve account_sid=<account_sid> auth_token=<auth_token> phone_number_sid=<phone_number_sid> [app_route=<app_route>]"
-	@ exit 1
-endif
-endif
-endif
 	@. venv/bin/activate; \
+		set -e; \
 		echo "Bootstrapping app..."; \
-		python bootstrap.py $(account_sid) $(auth_token) $(phone_number_sid) $(app_route); \
+		python bootstrap.py $(CONFIG_FILE) $(app_route); \
 		echo "Starting Flask server..."; \
 		python run.py
 
@@ -20,7 +19,7 @@ install: venv configure
 
 configure:
 	@. venv/bin/activate; \
-		python configure.py
+		python configure.py $(CONFIG_FILE)
 
 venv:
 	@ echo "Setting up virtual environment..."
@@ -29,3 +28,5 @@ venv:
 clean:
 	@ echo "Deleting virtual environment..."
 	@ rm -rf venv
+	@ echo "Deleting configuration file..."
+	@ rm -f $(CONFIG_FILE)
