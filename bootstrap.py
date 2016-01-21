@@ -6,15 +6,17 @@ if __name__ == "__main__":
     # TODO Better arg input & validation (maybe using argparse)
     # Validate arguments
     argc = len(sys.argv)
-    if argc < 3 or argc > 4:
+    if argc < 4 or argc > 5:
         print("Usage: python bootstrap.py <account_sid> <auth_token> <phone_number> [<app_route>]")
         sys.exit(-1)
     account_sid = sys.argv[1]
     auth_token = sys.argv[2]
     phone_number_sid = sys.argv[3]
-    app_route = sys.argv[4]
-    if app_route is None:
+    if argc == 5:
+        app_route = sys.argv[4]
+    else:
         app_route = ''
+
     print "Account SID: " + account_sid
     print "Auth Token: " + auth_token
     print "Phone Number SID: " + phone_number_sid
