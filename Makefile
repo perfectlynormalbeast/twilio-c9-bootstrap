@@ -2,14 +2,14 @@ serve:
 ifndef account_sid
 ifndef auth_token
 ifndef phone_number_sid
-	@ echo "Usage: make serve account_sid=<account_sid> auth_token=<auth_token> phone_number_sid=<phone_number_sid"
+	@ echo "Usage: make serve account_sid=<account_sid> auth_token=<auth_token> phone_number_sid=<phone_number_sid> [app_route=<app_route>]"
 	@ exit 1
 endif
 endif
 endif
 	@. venv/bin/activate; \
 		echo "Bootstrapping app..."; \
-		python bootstrap.py $(account_sid) $(auth_token) $(phone_number_sid); \
+		python bootstrap.py $(account_sid) $(auth_token) $(phone_number_sid) $(app_route); \
 		echo "Starting Flask server..."; \
 		python run.py
 
