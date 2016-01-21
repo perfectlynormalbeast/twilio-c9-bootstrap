@@ -1,5 +1,5 @@
-# twilio-bootstrap
-###### Jumpstart your first Twilio app!
+# twilio-c9-bootstrap
+###### Jumpstart your first Twilio app using Python and Cloud9!
 
 twilio-bootstrap is designed to make setting up your first Twilio app a breeze. Here's a walkthrough of how to get one up in no time.
 
