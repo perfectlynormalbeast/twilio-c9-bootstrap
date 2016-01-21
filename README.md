@@ -17,6 +17,9 @@ twilio-bootstrap is designed to make setting up your first Twilio app a breeze. 
 
 Now, send a text to your Twilio number. You should get a response from your app! You're all set to start developing your first Twilio app.
 
-##### NOTES
-- In case your app crashes, simply run `make serve` to restart your server.
-- You can also use `make serve app_route=<app_route>` to point your Twilio phone number's SMS URL to a custom application path on your server.
+##### `make` options
+- `make clean` - Uninstalls your app.
+- `make install` - Installs and configures your app.
+- Use `make configure` if you want to change your stored configuration.
+- `make serve` - Starts your server.
+- `make serve app_route=<app_route>` - Starts your server and points your Twilio phone number's SMS URL to the custom application path specified on your server.
