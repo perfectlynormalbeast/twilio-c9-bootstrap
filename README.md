@@ -11,9 +11,12 @@ twilio-bootstrap is designed to make setting up your first Twilio app a breeze. 
   - Under `Clone from Git or Mercurial URL` use `https://github.com/perfectlynormalbeast/twilio-bootstrap`
   - Under `Choose a template` use `Python`
 1. Set up your starter code.
-  - In the terminal window in your newly created workspace, enter the following commands:
-    * `make install`
-    * `make serve account_sid=<account_sid> auth_token=<auth_token> phone_number_sid=<phone_number_sid>`
-      - Here fill in the things you made a note of in steps 1 and 2.
+  - In your newly created workspace, click on the terminal window (bottom pane).
+  - Type `make` and return.
+  - Enter your credentials from steps 1 and 2 when prompted.
 
-Now, send a text to your new Twilio number. You should get a response from your app! You're all set to start developing your first Twilio app.
+Now, send a text to your Twilio number. You should get a response from your app! You're all set to start developing your first Twilio app.
+
+##### NOTES
+- In case your app crashes, simply run `make serve` to restart your server.
+- You can also use `make serve app_route=<app_route>` to point your Twilio phone number's SMS URL to a custom application path on your server.
