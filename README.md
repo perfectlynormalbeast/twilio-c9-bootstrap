@@ -18,6 +18,10 @@ twilio-c9-bootstrap is designed to make setting up your first Twilio app a breez
 
 Now, send a text to your Twilio number. You should get a response from your app! You're all set to start developing your first Twilio app.
 
+##### Next steps
+- Tinker around with `run.py` to add more functionality to your app.
+- Explore [Twilio's API Documentation & Libraries](https://www.twilio.com/api)
+
 ##### Additional `make` options
 - `make clean` - Uninstalls your server.
 - `make install` - Installs and configures your server.
