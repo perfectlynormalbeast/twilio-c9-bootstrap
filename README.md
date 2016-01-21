@@ -9,7 +9,7 @@ twilio-c9-bootstrap is designed to make setting up your first Twilio app a breez
   - Under your [list of incoming phone numbers](https://www.twilio.com/user/account/phone-numbers/incoming), click on your new Twilio number and make note of its SID.
 1. [Set up a Cloud9 account](https://c9.io/web/sign-up/free) and [create a new workspace](https://c9.io/new).
   - Enter a project name (and optionally, a description).
-  - Under `Clone from Git or Mercurial URL` enter `https://github.com/perfectlynormalbeast/twilio-bootstrap`
+  - Under `Clone from Git or Mercurial URL` enter `https://github.com/perfectlynormalbeast/twilio-c9-bootstrap`
   - Under `Choose a template` select `Python`
 1. Set up your starter code.
   - In your newly created workspace, click on the terminal window (bottom pane).
