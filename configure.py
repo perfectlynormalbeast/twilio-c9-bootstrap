@@ -1,6 +1,20 @@
 import json
 import os
+import re
 import sys
+
+def validate_input(string, prefix=None):
+    if prefix is not None:
+        prefix_regexp = re.compile('\A[A-Z]{2}\Z')
+        prefix_match = prefix_regexp.match(prefix)
+        if prefix_match is None:
+            raise RuntimeError('Invalid prefix: ' + prefix)
+    else:
+        prefix = ''
+    sid_regexp = re.compile('\A' + prefix + '[0-9a-f]{32}\Z')
+    sid_match = sid_regexp.match(string)
+    if sid_match is None:
+        raise RuntimeError('Invalid input: ' + string)
 
 if __name__ == "__main__":
     # Parse command line arguments
@@ -26,8 +40,11 @@ if __name__ == "__main__":
     # Get new configuration
     properties = {}
     properties['account_sid'] = raw_input("Account SID: ")
+    validate_input(properties['account_sid'], 'AC')
     properties['auth_token'] = raw_input("Auth Token: ")
+    validate_input(properties['auth_token'])
     properties['phone_number_sid'] = raw_input("Phone Number SID: ")
+    validate_input(properties['phone_number_sid'], 'PN')
 
     # Store new configuration
     print "Storing configuration in: " + config_filepath
