@@ -4,6 +4,7 @@ import sys
 from twilio.rest import TwilioRestClient
 
 VARNAME_HOSTNAME = 'C9_HOSTNAME'
+DEFAULT_APP_ROUTE = 'app'
 
 if __name__ == "__main__":
     # Parse command line arguments
@@ -15,7 +16,7 @@ if __name__ == "__main__":
         app_route = sys.argv[2]
         print "Launching custom app route: " + app_route
     else:
-        app_route = ''
+        app_route = DEFAULT_APP_ROUTE
         print "Launching default app route"
     config_filepath = sys.argv[1]
 
