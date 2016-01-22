@@ -23,7 +23,7 @@ Now, send a text to your Twilio number. You should get a response from your app!
 - Explore [Twilio's API Documentation & Libraries](https://www.twilio.com/api)
 
 ##### Additional `make` options
-- `make` - Intall, configure and start your server.
+- `make` - Install, configure and start your server.
 - `make install` - Installs and configures your server.
 - `make configure` - Reconfigure your server.
 - `make serve` - Starts your server.
