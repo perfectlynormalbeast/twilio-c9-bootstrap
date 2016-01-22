@@ -8,16 +8,15 @@ DEFAULT_APP_ROUTE = 'app'
 
 if __name__ == "__main__":
     # Parse command line arguments
-    argc = len(sys.argv)
-    if argc < 2 or argc > 3:
-        print "Usage: python run.py <config_file> [<app_route>]"
+    if len(sys.argv) != 2:
+        print "Usage: python run.py <config_file>"
         exit(-1)
-    elif argc == 3:
-        app_route = sys.argv[2]
-    else:
-        app_route = DEFAULT_APP_ROUTE
-    print "Using app route:" + app_route
     config_filepath = sys.argv[1]
+
+    # Get app path from user
+    app_route = raw_input("Enter custom app route (press return to use default): ");
+    if len(app_route) is 0:
+        app_route = DEFAULT_APP_ROUTE
 
     # Parse configuration file
     try:
