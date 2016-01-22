@@ -4,13 +4,16 @@ CONFIG_FILE = config.json
 
 all: install serve
 
-serve:
+serve: bootstrap
+	@. venv/bin/activate; \
+		echo "Starting Flask server..."; \
+		python run.py
+
+bootstrap:
 	@. venv/bin/activate; \
 		set -e; \
 		echo "Bootstrapping app..."; \
 		python bootstrap.py $(CONFIG_FILE) $(app_route); \
-		echo "Starting Flask server..."; \
-		python run.py
 
 install: venv configure
 	@. venv/bin/activate; \

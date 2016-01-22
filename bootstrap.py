@@ -14,10 +14,9 @@ if __name__ == "__main__":
         exit(-1)
     elif argc == 3:
         app_route = sys.argv[2]
-        print "Launching custom app route: " + app_route
     else:
         app_route = DEFAULT_APP_ROUTE
-        print "Launching default app route"
+    print "Using app route:" + app_route
     config_filepath = sys.argv[1]
 
     # Parse configuration file
