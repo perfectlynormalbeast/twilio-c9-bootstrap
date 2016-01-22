@@ -9,7 +9,9 @@ serve:
 		echo "Starting Flask server..."; \
 		python run.py
 
-install: venv configure
+install: venv dependencies configure
+
+dependencies:
 	@. venv/bin/activate; \
 		echo "Resolving Python dependencies..."; \
 		pip install --upgrade -r requirements.txt
