@@ -23,8 +23,8 @@ Now, send a text to your Twilio number. You should get a response from your app!
 - Explore [Twilio's API Documentation & Libraries](https://www.twilio.com/api)
 
 ##### Additional `make` options
-- `make clean` - Uninstalls your server.
+- `make` - Intall, configure and start your server.
 - `make install` - Installs and configures your server.
 - `make configure` - Reconfigure your server.
 - `make serve` - Starts your server.
-- `make serve app_route=<app_route>` - Starts your app and points your Twilio phone number's SMS URL to a custom path on your server.
+- `make clean` - Uninstalls your server.
