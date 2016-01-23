@@ -10,6 +10,7 @@ twilio-c9-bootstrap is designed to make setting up your first Twilio app a breez
 1. [Set up a Cloud9 account](https://c9.io/web/sign-up/free) and [create a new workspace](https://c9.io/new).
   - Enter a project name (and optionally, a description).
   - Under `Clone from Git or Mercurial URL` enter `https://github.com/perfectlynormalbeast/twilio-c9-bootstrap`
+  - Under `Hosted workspace` select `Private`
   - Under `Choose a template` select `Python`
 1. Set up your starter code.
   - In your newly created workspace, click on the terminal window (bottom pane).
