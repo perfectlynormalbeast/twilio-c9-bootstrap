@@ -3,7 +3,7 @@ import twilio.twiml
 
 app = Flask(__name__)
  
-@app.route("/app", methods=['GET', 'POST'])
+@app.route("/sms", methods=['GET', 'POST'])
 def hello_monkey():
     """Respond to incoming calls with a simple text message."""
  

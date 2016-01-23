@@ -4,7 +4,7 @@ import sys
 from twilio.rest import TwilioRestClient
 
 VARNAME_HOSTNAME = 'C9_HOSTNAME'
-DEFAULT_APP_ROUTE = 'app'
+DEFAULT_APP_ROUTE = 'sms'
 
 if __name__ == "__main__":
     # Parse command line arguments
