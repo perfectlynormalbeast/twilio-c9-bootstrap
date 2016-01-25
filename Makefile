@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-CONFIG_FILE = config.json
+CONFIG_FILE = ../config.json
 
 all: install serve
 
