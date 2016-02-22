@@ -12,7 +12,7 @@ install: dependencies configure
 
 dependencies:
 	echo "Resolving Python dependencies..."
-	pip install --upgrade -r requirements.txt
+	sudo pip install --upgrade -r requirements.txt
 
 configure:
 	echo "Configuring app..."
