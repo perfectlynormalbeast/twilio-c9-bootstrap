@@ -8,7 +8,6 @@ twilio-c9-bootstrap is designed to make setting up your first Twilio app a breez
 1. [Buy a phone number](https://www.twilio.com/user/account/phone-numbers/search).
   - Under your [list of incoming phone numbers](https://www.twilio.com/user/account/phone-numbers/incoming), click on your new Twilio number and make note of its SID.
 1. [Set up a Cloud9 account](https://c9.io/web/sign-up/free) and [create a new workspace](https://c9.io/new).
-  - Enter a project name (and optionally, a description).
   - Under `Clone from Git or Mercurial URL` enter `https://github.com/perfectlynormalbeast/twilio-c9-bootstrap`
   - Under `Hosted workspace` select `Public`
   - Under `Choose a template` select `Python`
@@ -16,7 +15,7 @@ twilio-c9-bootstrap is designed to make setting up your first Twilio app a breez
   - In your newly created workspace, click on the terminal window (bottom pane).
   - Type `make install` and return.
   - Enter your credentials from steps 1 and 2 when prompted.
-  - Type `python run.py` (or `make serve`) to run your server.
+  - Type `make serve` (or `python run.py`) and enter to run your server.
 
 Now, send a text to your Twilio number. You should get a response from your app! You're all set to start developing your first Twilio app.
 
@@ -25,7 +24,8 @@ Now, send a text to your Twilio number. You should get a response from your app!
 - Explore [Twilio's API Documentation & Libraries](https://www.twilio.com/api)
 
 ##### Additional `make` options
-- `make install` - Installs and configures your server.
-- `make configure` - Reconfigure your server.
-- `make serve` - Starts your server.
-- `make clean` - Uninstalls your server.
+- `make` - Installs, configures and starts your server
+- `make install` - Installs and configures your server
+- `make configure` - Reconfigures your server
+- `make serve` - Starts your server
+- `make clean` - Uninstalls your server
