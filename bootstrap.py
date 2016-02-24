@@ -15,6 +15,7 @@ if __name__ == "__main__":
 
     # Get app path from user
     app_route = raw_input("Enter custom app route (press return to use default): ");
+    app_route = app_route.strip('/')
     if len(app_route) is 0:
         app_route = DEFAULT_APP_ROUTE
 
