@@ -15,7 +15,7 @@ twilio-c9-bootstrap is designed to make setting up your first Twilio app a breez
   - In your newly created workspace, click on the terminal window (bottom pane).
   - Type `make install` and return.
   - Enter your credentials from steps 1 and 2 when prompted.
-  - Type `make serve` (or `python run.py`) and enter to run your server.
+  - Type `python run.py` and enter to run your server.
 
 Now, send a text to your Twilio number. You should get a response from your app! You're all set to start developing your first Twilio app.
 
