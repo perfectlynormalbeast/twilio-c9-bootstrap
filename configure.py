@@ -2,6 +2,7 @@ import json
 import os
 import re
 import sys
+from twilio.rest import TwilioRestClient
 
 def validate_input(string, prefix=None):
     if prefix is not None:
@@ -45,6 +46,12 @@ if __name__ == "__main__":
     validate_input(properties['auth_token'])
     properties['phone_number_sid'] = raw_input("Phone Number SID: ")
     validate_input(properties['phone_number_sid'], 'PN')
+
+    # Validate credentials and get phone number
+    client = TwilioRestClient(properties['account_sid'], properties['auth_token'])
+    number = client.phone_numbers.get(properties['phone_number_sid'])
+    properties['phone_number'] = number.phone_number
+    print "Phone Number: " + properties['phone_number']
 
     # Store new configuration
     print "Storing configuration in: " + config_filepath
