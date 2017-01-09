@@ -13,6 +13,7 @@ twilio-c9-bootstrap is designed to make setting up your first Twilio app a breez
   - Under `Choose a template` select `Python`
 1. Set up your starter code.
   - In your newly created workspace, click on the terminal window (bottom pane).
+  - Type `git checkout bootcamp` and return.
   - Type `make install` and return.
   - Enter your credentials from steps 1 and 2 when prompted.
   - Type `python run.py` and enter to run your server.
